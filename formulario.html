@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --white-color: #fff;
+      --gray-100: #f8f9fa;
+      --gray-200: #e9ecef;
+      --gray-400: #ced4da;
+      --gray-600: #6c757d;
+      --gray-700: #495057;
+      --gray-800: #343a40;
+      --border-radius: 0.25rem;
+      --input-padding-y: 0.375rem;
+      --input-padding-x: 0.75rem;
+      --form-gap: 1rem;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: var(--gray-100);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .form-container {
+      background-color: var(--white-color);
+      padding: 2.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    fieldset {
+      border: 2px solid #ccc;
+      border-radius: 25px;
+      padding: 30px;
+      background-color: #fff;
+    }
+
+    legend {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      text-align: left;
+      font-weight: bold;
+      color: var(--gray-700);
+    }
+
+    label i {
+      color: var(--primary-color);
+      margin-right: 8px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      margin-top: 5px;
+      border: 1px solid var(--gray-400);
+      border-radius: 12px;
+      box-sizing: border-box;
+    }
+
+    .form-control-file {
+      padding-top: 0.375rem;
+      padding-bottom: 0.375rem;
+    }
+
+ 
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Matrícula</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href ="style.css">
+</head>
+
+<body>
+
+  <img src="images/1.jpg" alt="Logo Image" STYLE="height: 100px;">
+
+  <div class="form-container">
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Formulario de Matrícula</legend>
+
+       
+        <h2>Información requerida para el acudiente</h2>
+
+     
+        <label for="nombre"><i class="fa-solid fa-circle-user"></i>Primer Nombre </label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="nombre"><i class="fa-solid fa-circle-user"></i>Segundo Nombre </label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="nombre"><i class="fa-solid fa-circle-user"></i>Primer Apellido</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="nombre"><i class="fa-solid fa-circle-user"></i> Segundo Apellido </label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="tipoSexo"> <i class="fa-solid fa-children"></i>Tipo de Sexo</label>
+        <select id="tipoSexo" name="tipoSexo" required>
+          <option value="" disabled selected hidden>Selecione un tipo de Sexo </option>
+          <option value="XX">XX (Femenino)</option>
+          <option value="XY">XY (Masculino)</option>
+        </select>
+
+        <label for="tipoDocumento"><i class="fa-solid fa-id-card"></i>Tipo de Documento</label>
+        <select id="tipoDocumento" name="tipoDocumento" required>
+          <option value="" disabled selected hidden>Seleccione un tipo de documento</option>
+          <option value="CC">Cédula de Ciudadanía</option>
+          <option value="CE">Cédula de Extranjería</option>
+        </select>
+
+        <label for="documento"><i class="fa-solid fa-hashtag"></i>Número del Documento</label>
+        <input type="number" id="documento" name="documento" required>
+
+        <label for="fecha_nacimiento"><i class="fa-solid fa-calendar"></i>Fecha de Nacimiento </label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+        <label for="correo"><i class="fa-solid fa-envelope"></i>Correo Electrónico</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="telefono"><i class="fa-solid fa-phone"></i>Número de Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+        
+        <h2>Información requerida para el estudiante</h2>
+
+        
+        <label for="nombre"><i class="fa-solid fa-circle-user"></i>Primer Nombre </label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="nombre"><i class="fa-solid fa-circle-user"></i>Segundo Nombre </label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="nombre"><i class="fa-solid fa-circle-user"></i>Primer Apellido </label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="nombre"><i class="fa-solid fa-circle-user"></i> Segundo Apellido</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="tipoSexo"><i class="fa-solid fa-id-card"></i>Tipo de Sexo</label>
+        <select id="tipoSexo" name="tipoSexo" required>
+          <option value="" disabled selected hidden>Selecione un Tipo deSexo </option>
+          <option value="XX">XX (Femenino)</option>
+          <option value="XY">XY (Masculino)</option>
+        </select>
+
+        <label for="tipoDocumento"><i class="fa-solid fa-id-card"></i>Tipo de Documento</label>
+        <select id="tipoDocumento" name="tipoDocumento" required>
+          <option value="" disabled selected hidden>Seleccione un tipo de documento</option>
+          <option value="CC">Cédula de Ciudadanía</option>
+          <option value="CE">Targeta de identidad</option>
+        </select>
+
+        <label for="documento"><i class="fa-solid fa-hashtag"></i>Número del Documento</label>
+        <input type="number" id="documento" name="documento" required>
+
+        <label for="fecha_nacimiento"><i class="fa-solid fa-calendar"></i>Fecha de Nacimiento</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+        <label for="correo"><i class="fa-solid fa-envelope"></i>Correo Electrónico (Opcional)</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="telefono"><i class="fa-solid fa-phone"></i>Número de Teléfono (Opcional) </label>
+        <input type="tel" id="telefono" name="telefono" placeholder="000-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+        
+        <label for="grado"><i class="fa-solid fa-graduation-cap"></i>Grado a Matricular</label>
+        <select id="grado" name="grado" required>
+          <option value="" disabled selected hidden>Seleccione un grado</option>
+          <option value="Cuarto">Cuarto</option>
+          <option value="Quinto">Quinto</option>
+          <option value="Sexto">Sexto</option>
+          <option value="Séptimo">Séptimo</option>
+          <option value="Octavo">Octavo</option>
+          <option value="Noveno">Noveno</option>
+          <option value="Décimo">Décimo</option>
+          <option value="Once">Once</option>
+        </select>
+
+          <h2>Lugar de Nacimiento</h2>
+<body>
+<label for="Pais"><i class="fa-solid fa-earth-americas"></i>Pais</label>
+
+  <select id="pais">
+    <option value="" disabled selected hidden>Seleccione un Pais</option>
+  </select>
+
+<label for="Departamento"><i class="fa-solid fa-flag"></i>Departamento</label>
+  <select id="departamento" disabled>
+    <option value="" disabled selected hidden>Seleccione un Departamento</option>
+  </select>
+
+<label for="Ciudad"><i class="fa-solid fa-city"></i>Ciudad</label>
+  <select id="ciudad" disabled>
+<option value="" disabled selected hidden>Seleccione una Ciudad</option>
+  </select>
+
+  <script>
+    // Datos simulados
+   const datos = {
+      "Colombia": {
+        "Amazonas": ["Leticia"],
+        "Antioquia": ["Medellín"],
+        "Arauca": ["Arauca"],
+        "Atlántico": ["Barranquilla"],
+        "Bolívar": ["Cartagena de Indias"],
+        "Boyacá": ["Tunja"],
+        "Caldas": ["Manizales"],
+        "Caquetá": ["Florencia"],
+        "Casanare": ["Yopal"],
+        "Cauca": ["Popayán"],
+        "Cesar": ["Valledupar"],
+        "Chocó": ["Quibdó"],
+        "Córdoba": ["Montería"],
+        "Cundinamarca": ["Bogotá"],
+        "Guainía": ["Inírida"],
+        "Guaviare": ["San José del Guaviare"],
+        "Huila": ["Neiva"],
+        "La Guajira": ["Riohacha"],
+        "Magdalena": ["Santa Marta"],
+        "Meta": ["Villavicencio"],
+        "Nariño": ["Pasto"],
+        "Norte de Santander": ["Cúcuta"],
+        "Putumayo": ["Mocoa"],
+        "Quindío": ["Armenia"],
+        "Risaralda": ["Pereira"],
+        "San Andrés y Providencia": ["San Andrés"],
+        "Santander": ["Bucaramanga"],
+        "Sucre": ["Sincelejo"],
+        "Tolima": ["Ibagué"],
+        "Valle del Cauca": ["Cali"],
+        "Vaupés": ["Mitú"],
+        "Vichada": ["Puerto Carreño"]
+      },
+      "Venezuela": {
+        "Amazonas": ["Puerto Ayacucho"],
+        "Anzoátegui": ["Barcelona"],
+        "Apure": ["San Fernando de Apure"],
+        "Aragua": ["Maracay"],
+        "Barinas": ["Barinas"],
+        "Bolívar": ["Ciudad Bolívar"],
+        "Carabobo": ["Valencia"],
+        "Cojedes": ["San Carlos"],
+        "Delta Amacuro": ["Tucupita"],
+        "Falcón": ["Coro"],
+        "Guárico": ["San Juan de los Morros"],
+        "Lara": ["Barquisimeto"],
+        "Mérida": ["Mérida"],
+        "Miranda": ["Los Teques"],
+        "Monagas": ["Maturín"],
+        "Nueva Esparta": ["La Asunción"],
+        "Portuguesa": ["Guanare"],
+        "Sucre": ["Cumaná"],
+        "Táchira": ["San Cristóbal"],
+        "Trujillo": ["Trujillo"],
+        "La Guaira": ["La Guaira"],
+        "Yaracuy": ["San Felipe"],
+        "Zulia": ["Maracaibo"],
+        "Distrito Capital": ["Caracas"]
+      },
+      "Ecuador": {
+        "Azuay": ["Cuenca"],
+        "Bolívar": ["Guaranda"],
+        "Cañar": ["Azogues"],
+        "Carchi": ["Tulcán"],
+        "Chimborazo": ["Riobamba"],
+        "Cotopaxi": ["Latacunga"],
+        "El Oro": ["Machala"],
+        "Esmeraldas": ["Esmeraldas"],
+        "Galápagos": ["Puerto Baquerizo Moreno"],
+        "Guayas": ["Guayaquil"],
+        "Imbabura": ["Ibarra"],
+        "Loja": ["Loja"],
+        "Los Ríos": ["Babahoyo"],
+        "Manabí": ["Portoviejo"],
+        "Morona Santiago": ["Macas"],
+        "Napo": ["Tena"],
+        "Orellana": ["Francisco de Orellana"],
+        "Pastaza": ["Puyo"],
+        "Pichincha": ["Quito"],
+        "Santa Elena": ["Santa Elena"],
+        "Santo Domingo de los Tsáchilas": ["Santo Domingo"],
+        "Sucumbíos": ["Nueva Loja"],
+        "Tungurahua": ["Ambato"],
+        "Zamora Chinchipe": ["Zamora"]
+      },
+      "Perú": {
+        "Amazonas": ["Chachapoyas"],
+        "Áncash": ["Huaraz"],
+        "Apurímac": ["Abancay"],
+        "Arequipa": ["Arequipa"],
+        "Ayacucho": ["Ayacucho"],
+        "Cajamarca": ["Cajamarca"],
+        "Callao": ["Callao"],
+        "Cusco": ["Cusco"],
+        "Huancavelica": ["Huancavelica"],
+        "Huánuco": ["Huánuco"],
+        "Ica": ["Ica"],
+        "Junín": ["Huancayo"],
+        "La Libertad": ["Trujillo"],
+        "Lambayeque": ["Chiclayo"],
+        "Lima": ["Lima"],
+        "Loreto": ["Iquitos"],
+        "Madre de Dios": ["Puerto Maldonado"],
+        "Moquegua": ["Moquegua"],
+        "Pasco": ["Cerro de Pasco"],
+        "Piura": ["Piura"],
+        "Puno": ["Puno"],
+        "San Martín": ["Moyobamba"],
+        "Tacna": ["Tacna"],
+        "Tumbes": ["Tumbes"],
+        "Ucayali": ["Pucallpa"]
+      },
+      "Bolivia": {
+        "Chuquisaca": ["Sucre"],
+        "La Paz": ["La Paz"],
+        "Cochabamba": ["Cochabamba"],
+        "Oruro": ["Oruro"],
+        "Potosí": ["Potosí"],
+        "Tarija": ["Tarija"],
+        "Santa Cruz": ["Santa Cruz de la Sierra"],
+        "Beni": ["Trinidad"],
+        "Pando": ["Cobija"]
+      },
+      "Chile": {
+        "Arica y Parinacota": ["Arica"],
+        "Tarapacá": ["Iquique"],
+        "Antofagasta": ["Antofagasta"],
+        "Atacama": ["Copiapó"],
+        "Coquimbo": ["La Serena"],
+        "Valparaíso": ["Valparaíso"],
+        "Metropolitana de Santiago": ["Santiago"],
+        "O’Higgins": ["Rancagua"],
+        "Maule": ["Talca"],
+        "Ñuble": ["Chillán"],
+        "Biobío": ["Concepción"],
+        "La Araucanía": ["Temuco"],
+        "Los Ríos": ["Valdivia"],
+        "Los Lagos": ["Puerto Montt"],
+        "Aysén": ["Coyhaique"],
+        "Magallanes": ["Punta Arenas"]
+      },
+      "Argentina": {
+        "Buenos Aires": ["La Plata"],
+        "Catamarca": ["San Fernando del Valle de Catamarca"],
+        "Chaco": ["Resistencia"],
+        "Chubut": ["Rawson"],
+        "Córdoba": ["Córdoba"],
+        "Corrientes": ["Corrientes"],
+        "Entre Ríos": ["Paraná"],
+        "Formosa": ["Formosa"],
+        "Jujuy": ["San Salvador de Jujuy"],
+        "La Pampa": ["Santa Rosa"],
+        "La Rioja": ["La Rioja"],
+        "Mendoza": ["Mendoza"],
+        "Misiones": ["Posadas"],
+        "Neuquén": ["Neuquén"],
+        "Río Negro": ["Viedma"],
+        "Salta": ["Salta"],
+        "San Juan": ["San Juan"],
+        "San Luis": ["San Luis"],
+        "Santa Cruz": ["Río Gallegos"],
+        "Santa Fe": ["Santa Fe"],
+        "Santiago del Estero": ["Santiago del Estero"],
+        "Tierra del Fuego": ["Ushuaia"],
+        "Tucumán": ["San Miguel de Tucumán"],
+        "Ciudad Autónoma de Buenos Aires": ["Buenos Aires"]
+      },
+      "Uruguay": {
+        "Artigas": ["Artigas"],
+        "Canelones": ["Canelones"],
+        "Cerro Largo": ["Melo"],
+        "Colonia": ["Colonia del Sacramento"],
+        "Durazno": ["Durazno"],
+        "Flores": ["Trinidad"],
+        "Florida": ["Florida"],
+        "Lavalleja": ["Minas"],
+        "Maldonado": ["Maldonado"],
+        "Montevideo": ["Montevideo"],
+        "Paysandú": ["Paysandú"],
+        "Río Negro": ["Fray Bentos"],
+        "Rivera": ["Rivera"],
+        "Rocha": ["Rocha"],
+        "Salto": ["Salto"],
+        "San José": ["San José de Mayo"],
+        "Soriano": ["Mercedes"],
+        "Tacuarembó": ["Tacuarembó"],
+        "Treinta y Tres": ["Treinta y Tres"]
+      },
+      "Paraguay": {
+        "Asunción": ["Asunción"],
+        "Concepción": ["Concepción"],
+        "San Pedro": ["San Pedro de Ycuamandiyú"],
+        "Cordillera": ["Caacupé"],
+        "Guairá": ["Villarrica"],
+        "Caaguazú": ["Coronel Oviedo"],
+        "Caazapá": ["Caazapá"],
+        "Itapúa": ["Encarnación"],
+        "Misiones": ["San Juan Bautista"],
+        "Paraguarí": ["Paraguarí"],
+        "Alto Paraná": ["Ciudad del Este"],
+        "Central": ["Areguá"],
+        "Ñeembucú": ["Pilar"],
+        "Amambay": ["Pedro Juan Caballero"],
+        "Canindeyú": ["Salto del Guairá"],
+        "Presidente Hayes": ["Pozo Colorado"],
+        "Alto Paraguay": ["Fuerte Olimpo"],
+        "Boquerón": ["Filadelfia"]
+      },
+      "Brasil": {
+        "Acre": ["Rio Branco"],
+        "Alagoas": ["Maceió"],
+        "Amapá": ["Macapá"],
+        "Amazonas": ["Manaus"],
+        "Bahia": ["Salvador"],
+        "Ceará": ["Fortaleza"],
+        "Distrito Federal": ["Brasília"],
+        "Espírito Santo": ["Vitória"],
+        "Goiás": ["Goiânia"],
+        "Maranhão": ["São Luís"],
+        "Mato Grosso": ["Cuiabá"],
+        "Mato Grosso do Sul": ["Campo Grande"],
+        "Minas Gerais": ["Belo Horizonte"],
+        "Pará": ["Belém"],
+        "Paraíba": ["João Pessoa"],
+        "Paraná": ["Curitiba"],
+        "Pernambuco": ["Recife"],
+        "Piauí": ["Teresina"],
+        "Rio de Janeiro": ["Rio de Janeiro"],
+        "Rio Grande do Norte": ["Natal"],
+        "Rio Grande do Sul": ["Porto Alegre"],
+        "Rondônia": ["Porto Velho"],
+        "Roraima": ["Boa Vista"],
+        "Santa Catarina": ["Florianópolis"],
+        "São Paulo": ["São Paulo"],
+        "Sergipe": ["Aracaju"],
+        "Tocantins": ["Palmas"]
+      }
+    };
+
+
+    // Elementos del DOM
+    const paisSelect = document.getElementById("pais");
+    const departamentoSelect = document.getElementById("departamento");
+    const ciudadSelect = document.getElementById("ciudad");
+
+    // Cargar países
+    Object.keys(datos).forEach(pais => {
+      const option = document.createElement("option");
+      option.value = pais;
+      option.textContent = pais;
+      paisSelect.appendChild(option);
+    });
+
+    // Evento cambio de país
+    paisSelect.addEventListener("change", () => {
+      departamentoSelect.innerHTML = '<option value="">Seleccione un departamento</option>';
+      ciudadSelect.innerHTML = '<option value="">Seleccione una ciudad</option>';
+      ciudadSelect.disabled = true;
+
+      let pais = paisSelect.value;
+
+      if (pais) {
+        Object.keys(datos[pais]).forEach(depto => {
+          let option = document.createElement("option");
+          option.value = depto;
+          option.textContent = depto;
+          departamentoSelect.appendChild(option);
+        });
+        departamentoSelect.disabled = false;
+      }
+    });
+
+    // Evento cambio de departamento
+    departamentoSelect.addEventListener("change", () => {
+      ciudadSelect.innerHTML = '<option value="">Seleccione una ciudad</option>';
+      ciudadSelect.disabled = true;
+
+      let pais = paisSelect.value;
+      let depto = departamentoSelect.value;
+
+      if (pais && depto) {
+        datos[pais][depto].forEach(ciudad => {
+          let option = document.createElement("option");
+          option.value = ciudad;
+          option.textContent = ciudad;
+          ciudadSelect.appendChild(option);
+        });
+        ciudadSelect.disabled = false;
+      }
+    });
+  </script>
+
+</body>
+  
+
+
+     
+
+
+  <h2>Lugar de Residencia</h2>
+
+   
+
+
+         <label for="Barrio"><i class="fa-solid fa-city"></i></label>
+        <select id="Barrio" name="Barrio" required>
+          <option value="" disabled selected hidden>Seleccione un Barrio</option>
+
+    <option value="Centro">Centro</option>
+    <option value="Veinte de Julio">Veinte de Julio</option>
+    <option value="Primero de Octubre">Primero de Octubre</option>
+    <option value="El Porvenir">El Porvenir</option>
+    <option value="La Esperanza">La Esperanza</option>
+    <option value="Villa del Parque">Villa del Parque</option>
+    <option value="Modelo">Modelo</option>
+    <option value="El Dorado">El Dorado</option>
+    <option value="Villa del Prado">Villa del Prado</option>
+    <option value="Villa Angela">Villa Angela</option>
+    <option value="Santander">Santander</option>
+    <option value="Santa Rosita">Santa Rosita</option>
+    <option value="Bello Horizonte">Bello Horizonte</option>
+    <option value="Divino Niño">Divino Niño</option>
+    <option value="Popular">Popular</option>
+    <option value="Remanso">Remanso</option>
+    <option value="Coopsagua">Coopsagua</option>
+    <option value="Villa Andrea">Villa Andrea</option>
+    <option value="San Jorge">San Jorge</option>
+    <option value="La Granja">La Granja</option>
+    <option value="El Triunfo">El Triunfo</option>
+    <option value="San Ignacio">San Ignacio</option>
+    <option value="Villa Unión">Villa Unión</option>
+    <option value="Primero de Mayo">Primero de Mayo</option>
+    <option value="La Paz">La Paz</option>
+    <option value="Santo Domingo">Santo Domingo</option>
+    <option value="Primera de Octubre">Primera de Octubre</option>
+    <option value="Vicentenario 1">Vicentenario 1</option>
+    <option value="Vicentenario 2">Vicentenario 2</option>
+    <option value="San Jose">San Jose</option>
+    
+    <option value="Ninguna de las Anteriores">Ninguna de las Anteriores</option>
+
+</select>
+
+  
+          <label for="nombre"><i class="fa-solid fa-location-dot"></i>Direccion </label>
+        <input type="text" id="nombre" name="nombre" required>
+       <h2>Salud</h2>
+
+ <label for="EPS"><i class="fa-solid fa-house-medical"></i>EPS</label>
+        <select id="EPS" name="EPS" required>
+          <option value="" disabled selected hidden>Seleccione una EPS</option>
+          
+          <option value="EPS">Salud Total</option>
+          <option value="EPS">Sura</option>
+          <option value="EPS">Sanitas</option>
+          <option value="EPS">Nueva EPS</option>
+          <option value="EPS">AlianSalud</option>
+       </select>
+          
+
+          <label for="EPS"><i class="fa-solid fa-check"></i>Tipo de Afiliacion</label>
+        <select id="EPS" name="EPS" required>
+          <option value="" disabled selected hidden>Seleccione una Afiliacion</option>
+
+          <option value="EPS">Contributivo</option>
+          <option value="EPS">Subsidiado</option>
+</select>
+
+          <label for="EPS"><i class="fa-solid fa-bed-pulse"></i>Discapacidades</label>
+        <select id="EPS" name="EPS" required>
+          <option value="" disabled selected hidden>Seleccione una Discpacidad</option>
+          
+          <option value="EPS">física</option>
+          <option value="EPS">auditiva</option>
+          <option value="EPS">visual</option>
+          <option value="EPS">sordoceguera</option>
+          <option value="EPS">intelectual</option>
+          <option value="EPS">psicosocial</option>
+          <option value="EPS">multiple</option>
+          <option value="EPS">No aplica</option>
+         
+          
+</select>
+        
+
+    <label for="EPS"><i class="fa-solid fa-droplet"></i>Tipo de RH</label>
+        <select id="EPS" name="EPS" required>
+          <option value="" disabled selected hidden>Seleccione un Tipo de RH</option>
+
+          <option value="EPS">A+</option>
+          <option value="EPS">A-</option>
+          <option value="EPS">B+</option>
+          <option value="EPS">B-</option>
+          <option value="EPS">AB+</option>
+          <option value="EPS">AB-</option>
+          <option value="EPS">O+</option>
+          <option value="EPS">O</option>
+</select>
+
+
+   <label for="EPS"><i class="fa-solid fa-people-group"></i>Tipo de Poblacion</label>
+        <select id="EPS" name="EPS" required>
+          <option value="" disabled selected hidden>Seleccione un Tipo de Poblacion</option>
+
+          <option value="EPS">Pueblo Indigena</option>
+          <option value="EPS">Pueblo Afrocolombiano</option>
+          <option value="EPS">Pueblo Mestizo/Blanco</option>
+          <option value="EPS">No aplica</option>
+</select>
+        <h2>Documentación requerida (PDF)</h2>
+
+        <label><i class="fa-solid fa-file-pdf"></i>Fotocopia del documento del Estudiante (Ampliada al 150%)</label>
+        <input type="file" accept=".pdf" class="form-control-file" required>
+
+        <label><i class="fa-solid fa-file-pdf"></i>Fotocopia del documento del Acudiente (Ampliada al 150%)</label>
+        <input type="file" accept=".pdf" class="form-control-file" required>
+
+        <label><i class="fa-solid fa-file-pdf"></i>Certificados originales de años anteriores</label>
+        <input type="file" accept=".pdf" class="form-control-file" required>
+
+        <label><i class="fa-solid fa-file-pdf"></i>Certificado de salud vigente</label>
+        <input type="file" accept=".pdf" class="form-control-file" required>
+
+        <label><i class="fa-solid fa-file-pdf"></i>Fotocopia del SISBEN vigente</label>
+        <input type="file" accept=".pdf" class="form-control-file" required>
+
+        <label><i class="fa-solid fa-file-pdf"></i>Fotocopia del carnet de vacunas (menores de 6 años)</label>
+        <input type="file" accept=".pdf" class="form-control-file" required>
+
+        <label><i class="fa-solid fa-file-pdf"></i>Fotocopia del recibo de la luz</label>
+        <input type="file" accept=".pdf" class="form-control-file" required>
+
+        <label><i class="fa-solid fa-file-pdf"></i>Fotografía del estudiante (Fotografia ,No PDF)</label>
+        <input type="file" accept=".pdf" class="form-control-file" required>
+
+<div style="text-align: left; margin-top: 20px;">
+  <input type="checkbox" id="terminos" name="terminos" required>
+  <label for="terminos">He completado los recuadros</label>
+</div>
+
+<div style="text-align: center; margin-top: 20px;">
+  <input type="submit" value="Enviar Formulario">
+</div>
+
+
+  <h2>Para regresar a la página principal seleccione la imagen</h2>
+  <a href="index.html">
+    <img src="images/entrada.jpeg" alt="Logo Image" STYLE="height: 105px;">
+  </a>
+  
+</body>
+</html>
